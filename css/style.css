@@ -55,7 +55,6 @@ body {
           flex-direction: column;
   position: relative;
 }
-
 .sub_page .hero_area {
   height: auto;
   background: none;
@@ -217,6 +216,17 @@ a:focus {
           align-items: center;
   position: relative;
 }
+.opening{
+  color: white;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background-color: #ff4f5a;
+  font-size: large;
+  font-weight: 100;
+  height: 755px;
+  text-align: center;
+}
 
 .slider_section .row {
   -webkit-box-align: center;
@@ -299,7 +309,7 @@ a:focus {
 }
 
 .slider_section .carousel_btn-container {
-  width: 120px;
+  width: 190px;
   position: absolute;
   bottom: 0;
   display: -webkit-box;
@@ -317,8 +327,8 @@ a:focus {
 .slider_section .carousel_btn-container .carousel-control-prev,
 .slider_section .carousel_btn-container .carousel-control-next {
   position: relative;
-  width: 55px;
-  height: 55px;
+  width: 95px;
+  height: 90px;
   border: none;
   border-radius: 100%;
   opacity: 1;
@@ -326,7 +336,7 @@ a:focus {
   background-size: 14px;
   background-position: center;
   background-color: #1cbbb4;
-  margin: 2px;
+  margin: 4px;
 }
 
 .slider_section .carousel_btn-container .carousel-control-prev:hover,
@@ -777,6 +787,8 @@ a:focus {
           align-items: center;
   min-width: 45px;
   min-height: 45px;
+  margin-left: 50px;
+  padding-left: 80px;
   margin-right: 20px;
 }
 
