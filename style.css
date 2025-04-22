@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Fixed box-sizing */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: #166C96;
+    position: relative;
+}
+
+/* Header starts */
+nav {
+    padding: 0.5vw 1vw;
+    width: 100%;
+    background-color: #1B2651;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    height: auto; /* Adjusted for better responsiveness */
+    width: 20vh;
+}
+
+#part2 {
+    height: 100%;
+    width: 40vh;
+    gap: 1vw;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    position: relative;
+}
+
+#part2 h4 {
+    background-color: aliceblue;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-weight: 500;
+    position: relative; /* Added for pseudo-element positioning */
+    overflow: hidden; /* Ensures hover effect stays within bounds */
+}
+
+#part2 h4::after { /* Scoped pseudo-element */
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+#part2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+#part2 h4 a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+
+#part2 h4:hover a{
+    color: white;
+    
+}
+
+/* Optional: Add focus styles for accessibility */
+#part2 h4:focus {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+
+/* Header ends */
