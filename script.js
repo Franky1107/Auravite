@@ -30,24 +30,58 @@ function swiperAnimation() {
         spaceBetween: 100,
     });
 }
-function menuAnimation() {
 
-    var menu = document.querySelector("nav h3")
-    var full = document.querySelector("#full-scr")
-    var navimg = document.querySelector("nav img")
-    var flag = 0
-    menu.addEventListener("click", function () {
-        if (flag == 0) {
-            full.style.top = 0
-            navimg.style.opacity = 0
-            flag = 1
-        } else {
-            full.style.top = "-100%"
-            navimg.style.opacity = 1
-            flag = 0
+document.getElementById('hamburger').addEventListener('click', function () {
+    const nav = document.getElementById('nav-part2');
+    if (nav.classList.contains('active')) {
+        // Smoothly hide the menu
+        nav.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        nav.style.opacity = '0';
+        nav.style.transform = 'translateY(-20px)';
+        setTimeout(() => {
+            nav.classList.remove('active');
+            nav.style.display = 'none'; // Hide after transition
+        }, 300); // Match the transition duration
+    } else {
+        // Smoothly show the menu
+        nav.style.display = 'flex';
+        setTimeout(() => {
+            nav.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            nav.style.opacity = '1';
+            nav.style.transform = 'translateY(0)';
+            nav.classList.add('active');
+        }, 10); // Slight delay to ensure transition applies
+    }
+});
+
+// Add event listeners to each navigation link
+document.querySelectorAll('#nav-part2 h4').forEach(navItem => {
+    navItem.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
+
+        // Get the target section's ID from the data-scroll-target attribute
+        const targetId = this.getAttribute('data-scroll-target');
+        const targetElement = document.querySelector(targetId);
+
+        // Scroll to the target section smoothly
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
-    })
-}
+
+        // Smoothly hide the navigation menu
+        const nav = document.getElementById('nav-part2');
+        nav.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        nav.style.opacity = '0';
+        nav.style.transform = 'translateY(-20px)';
+        setTimeout(() => {
+            nav.classList.remove('active');
+            nav.style.display = 'none'; // Hide after transition
+        }, 300); // Match the transition duration
+    });
+});
 
 function loaderAnimation() {
     var loader = document.querySelector("#loader");
