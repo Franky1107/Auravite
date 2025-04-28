@@ -23,13 +23,6 @@ function page4Animation() {
     })
 }
 
-function swiperAnimation() {
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        centeredSlides: true,
-        spaceBetween: 100,
-    });
-}
 
 document.getElementById('hamburger').addEventListener('click', function () {
     const nav = document.getElementById('nav-part2');
@@ -92,7 +85,5 @@ function loaderAnimation() {
 
 // window.onload = loaderAnimation;
 
-swiperAnimation()
 page4Animation()
-menuAnimation()
 loaderAnimation()

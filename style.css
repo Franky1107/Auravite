@@ -22,7 +22,8 @@
     font-family: neu;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
 }
@@ -36,16 +37,21 @@ html, body {
 #page1 {
     min-height: 100vh;
     width: 100%;
-    background-color: #edeae1; /* Greyish bisque */
+    background-color: #edeae1;
+    /* Greyish bisque */
     position: relative;
     padding: 0 2vw;
 }
 
 nav {
-    padding: 2vw 1vw; /* Keep the nav's own padding */
-    width: calc(100% + 4vw); /* Account for the parent's horizontal padding (2vw on each side) */
-    margin-left: -2vw; /* Offset the parent's left padding */
-    background-color: #1b2651; /* Dark blue */
+    padding: 2vw 1vw;
+    /* Keep the nav's own padding */
+    width: calc(100% + 4vw);
+    /* Account for the parent's horizontal padding (2vw on each side) */
+    margin-left: -2vw;
+    /* Offset the parent's left padding */
+    background-color: #1b2651;
+    /* Dark blue */
     display: flex;
     align-items: center;
     position: relative;
@@ -54,25 +60,33 @@ nav {
 }
 
 #nav-part2 {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     flex-direction: column;
     gap: 1rem;
-    background-color: #1b2651; /* Dark blue */
+    background-color: #1b2651;
+    /* Dark blue */
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     padding: 1rem;
     z-index: 10;
-    opacity: 0; /* Initially invisible */
-    transform: translateY(-20px); /* Slide up effect */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    opacity: 0;
+    /* Initially invisible */
+    transform: translateY(-20px);
+    /* Slide up effect */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Smooth transition */
 }
 
 #nav-part2.active {
-    display: flex; /* Show the menu when active */
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Reset position */
+    display: flex;
+    /* Show the menu when active */
+    opacity: 1;
+    /* Fully visible */
+    transform: translateY(0);
+    /* Reset position */
 }
 
 #hamburger {
@@ -84,30 +98,42 @@ nav {
 
 @media (max-width: 600px) {
     #hamburger {
-        display: block; /* Ensure it's visible */
-        font-size: 2rem; /* Adjust the size of the icon */
+        display: block;
+        /* Ensure it's visible */
+        font-size: 2rem;
+        /* Adjust the size of the icon */
         cursor: pointer;
-        width: 50px; /* Set the desired width */
-        height: 50px; /* Optional: Set height for a square shape */
-        text-align: center; /* Center the icon inside the box */
-        line-height: 50px; /* Vertically center the icon */
-        background-color: #1b2651; /* Optional: Add a background color */
-        color: white; /* Optional: Set the icon color */
-        border-radius: 5px; /* Optional: Add rounded corners */
+        width: 50px;
+        /* Set the desired width */
+        height: 50px;
+        /* Optional: Set height for a square shape */
+        text-align: center;
+        /* Center the icon inside the box */
+        line-height: 50px;
+        /* Vertically center the icon */
+        background-color: #1b2651;
+        /* Optional: Add a background color */
+        color: white;
+        /* Optional: Set the icon color */
+        border-radius: 5px;
+        /* Optional: Add rounded corners */
     }
 
     #nav-part2 {
-        display: none; /* Hide by default */
+        display: none;
+        /* Hide by default */
     }
 }
 
 #nav-part2 h4 {
     padding: 10px 20px;
-    border: 1px solid #fff; /* White with transparency */
+    border: 1px solid #fff;
+    /* White with transparency */
     border-radius: 50px;
     font-weight: 500;
     background-color: bisque;
-    color: #ffffffbb; /* White with transparency */
+    color: #ffffffbb;
+    /* White with transparency */
     transition: all ease 0.4s;
     position: relative;
     font-size: 20px;
@@ -119,7 +145,8 @@ nav {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #cd2028; /* Red */
+    background-color: #cd2028;
+    /* Red */
     left: 0;
     bottom: -100%;
     border-radius: 50%;
@@ -132,23 +159,29 @@ nav {
 }
 
 #nav-part2 h4 a {
-    color: #1b2651; /* White with transparency */
+    color: #1b2651;
+    /* White with transparency */
     text-decoration: none;
     position: relative;
     z-index: 9;
 }
 
 #nav-part2 h4:hover a {
-    color: #ffffff; /* White */
+    color: #ffffff;
+    /* White */
 }
 
 nav h3 {
     display: none;
 }
+
 nav img {
-    width: 20%; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the image fits within the dimensions */
+    width: 20%;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: contain;
+    /* Ensure the image fits within the dimensions */
 }
 
 #center {
@@ -168,40 +201,58 @@ nav img {
     width: 30vw;
     font-size: 4vw;
     line-height: 4vw;
-    color: #166c96; /* Light navy blue */
-    overflow: hidden; /* Hide overflowing text */
-    white-space: nowrap; /* Prevent text from wrapping */
-    border-right: 4px solid #000000; /* Simulate the cursor */
-    animation: typing 6s steps(30, end) infinite, blink 0.6s step-end infinite; /* Add delay in typing animation */
+    color: #166c96;
+    /* Light navy blue */
+    overflow: hidden;
+    /* Hide overflowing text */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    border-right: 4px solid #000000;
+    /* Simulate the cursor */
+    animation: typing 6s steps(30, end) infinite, blink 0.6s step-end infinite;
+    /* Add delay in typing animation */
 }
 
 @keyframes typing {
     0% {
-        width: 0; /* Start with no text visible */
+        width: 0;
+        /* Start with no text visible */
     }
+
     50% {
-        width: 30vw; /* Reveal the full width of the text */
+        width: 30vw;
+        /* Reveal the full width of the text */
     }
+
     80% {
-        width: 30vw; /* Pause at full width */
+        width: 30vw;
+        /* Pause at full width */
     }
+
     100% {
-        width: 0; /* Erase the text */
+        width: 0;
+        /* Erase the text */
     }
 }
 
 @keyframes blink {
     0% {
-        border-right-color: #103649; /* Cursor visible */
+        border-right-color: #103649;
+        /* Cursor visible */
     }
+
     50% {
-        border-right-color: transparent; /* Cursor hidden */
+        border-right-color: transparent;
+        /* Cursor hidden */
     }
+
     100% {
-        border-right-color: #103649; /* Cursor visible */
+        border-right-color: #103649;
+        /* Cursor visible */
     }
 }
-#left p{
+
+#left p {
     font-size: 2vw;
 }
 
@@ -376,7 +427,8 @@ nav img {
     width: 32vw;
     position: absolute;
     border-radius: 50%;
-    background: linear-gradient(to top right, #cd2028, #166c96); /* Red to light navy blue */
+    background: linear-gradient(to top right, #cd2028, #166c96);
+    /* Red to light navy blue */
     top: 58%;
     left: 25%;
     filter: blur(20px);
@@ -441,7 +493,8 @@ nav img {
 #fixed-image {
     height: 30vw;
     width: 24vw;
-    background-color: #166c96; /* Light navy blue */
+    background-color: #166c96;
+    /* Light navy blue */
     border-radius: 15px;
     position: fixed;
     z-index: 99;
@@ -480,8 +533,10 @@ nav img {
     position: fixed;
     height: 105vh;
     width: 100%;
-    background-color: #1b2651; /* Dark blue */
-    color: #ffffff; /* White */
+    background-color: #1b2651;
+    /* Dark blue */
+    color: #ffffff;
+    /* White */
     z-index: 9;
     bottom: 0;
     display: flex;
@@ -501,7 +556,8 @@ nav img {
 }
 
 #footer-bottom {
-    border-top: 1px solid #ffffff3c; /* White with transparency */
+    border-top: 1px solid #ffffff3c;
+    /* White with transparency */
     height: 10vh;
     width: 100%;
 }
@@ -601,7 +657,7 @@ nav img {
         /* background-color: white; */
         transition: all ease 0.2s;
         height: 10vw;
-        
+
     }
 
     #nav-part2 {
@@ -632,13 +688,39 @@ nav img {
         position: relative;
         z-index: 9;
     }
-    #left{
+
+    #left {
         width: 100%;
     }
+
     #left h3 {
         width: 80%;
         font-size: 8vw;
         line-height: 6vw;
+    }
+    #left h3 {
+        font-size: 12vw; /* Adjust font size for smaller screens */
+        line-height: 1.2; /* Adjust line height */
+        border-right: 3px solid #000000; /* Adjust cursor size */
+        animation: typing 6s steps(20, end) infinite, blink 0.6s step-end infinite; /* Adjust steps for smaller screens */
+    }
+    #left p{
+        font-size: 4.7vw;
+    }
+
+    @keyframes typing {
+        0% {
+            width: 0ch;
+        }
+        50% {
+            width: 13ch; /* Adjust width for smaller screens */
+        }
+        80% {
+            width: 13ch;
+        }
+        100% {
+            width: 0ch;
+        }
     }
 
     #center h1 {
@@ -760,7 +842,8 @@ nav img {
 #loader {
     height: 100%;
     width: 100%;
-    background-color: #1b2651; /* Dark blue */
+    background-color: #1b2651;
+    /* Dark blue */
     position: fixed;
     z-index: 999;
     top: 0;
@@ -773,7 +856,8 @@ nav img {
 #loader h1 {
     font-size: 4vw;
     color: transparent;
-    background: linear-gradient(to right, #cd2028, #166c96); /* Red to light navy blue */
+    background: linear-gradient(to right, #cd2028, #166c96);
+    /* Red to light navy blue */
     background-clip: text;
     -webkit-background-clip: text;
     position: absolute;
@@ -784,26 +868,56 @@ nav img {
     animation-timing-function: linear;
 }
 
-#loader h1:nth-child(1) { animation-delay: 0s; }
-#loader h1:nth-child(2) { animation-delay: 0.5s; }
-#loader h1:nth-child(3) { animation-delay: 1s; }
-#loader h1:nth-child(4) { animation-delay: 1.5s; }
-#loader h1:nth-child(5) { animation-delay: 2s; }
-#loader h1:nth-child(6) { animation-delay: 2.5s; }
-#loader h1:nth-child(7) { animation-delay: 3s; }
-#loader h1:nth-child(8) { animation-delay: 3.5s; }
-#loader h1:nth-child(9) { animation-delay: 4s; animation-duration: 1s; }
+#loader h1:nth-child(1) {
+    animation-delay: 0s;
+}
+
+#loader h1:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+#loader h1:nth-child(3) {
+    animation-delay: 1s;
+}
+
+#loader h1:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+#loader h1:nth-child(5) {
+    animation-delay: 2s;
+}
+
+#loader h1:nth-child(6) {
+    animation-delay: 2.5s;
+}
+
+#loader h1:nth-child(7) {
+    animation-delay: 3s;
+}
+
+#loader h1:nth-child(8) {
+    animation-delay: 3.5s;
+}
+
+#loader h1:nth-child(9) {
+    animation-delay: 4s;
+    animation-duration: 1s;
+}
 
 @keyframes load {
     0% {
         opacity: 0;
     }
+
     10% {
         opacity: 1;
     }
+
     90% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -823,12 +937,14 @@ nav img {
 
 .social-links a {
     margin: 0 1rem;
-    color: #1b2651; /* Adjust color to make it visible */
+    color: #1b2651;
+    /* Adjust color to make it visible */
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #166c96; /* Change color on hover */
+    color: #166c96;
+    /* Change color on hover */
 }
