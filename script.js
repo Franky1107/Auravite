@@ -2,6 +2,9 @@ const scroll = new LocomotiveScroll({
   el: document.querySelector("#main"),
   smooth: true,
 });
+window.addEventListener("load", () => {
+  scroll.update();
+});
 
 function page4Animation() {
   var elemC = document.querySelector("#elem-container");
