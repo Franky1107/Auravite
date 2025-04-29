@@ -554,18 +554,19 @@ nav img {
     height: 30vw;
     width: 24vw;
     background-color: #166c96;
-    /* Light navy blue */
     border-radius: 15px;
     position: fixed;
-    pointer-events: none;
-    z-index: 99;
+    pointer-events: none; /* Prevents blocking touches */
+    z-index: 999; /* Increased for safety */
     left: 50%;
     top: 25%;
+    transform: translate(-50%, -50%);
     display: none;
     background-size: cover;
     background-position: center;
-}
-
+    transition: opacity 0.2s ease;
+  }
+  
 
 
 #page5 {
