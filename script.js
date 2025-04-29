@@ -9,6 +9,8 @@ window.addEventListener("load", () => {
 function page4Animation() {
   var elemC = document.querySelector("#elem-container");
   var fixed = document.querySelector("#fixed-image");
+
+  // Desktop behavior
   elemC.addEventListener("mouseenter", function () {
     fixed.style.display = "block";
   });
@@ -17,13 +19,32 @@ function page4Animation() {
   });
 
   var elems = document.querySelectorAll(".elem");
+
   elems.forEach(function (e) {
+    var image = e.getAttribute("data-image");
+
+    // Desktop hover
     e.addEventListener("mouseenter", function () {
-      var image = e.getAttribute("data-image");
       fixed.style.backgroundImage = `url(${image})`;
+    });
+
+    // --- Mobile touch and hold ---
+    e.addEventListener("touchstart", function (event) {
+      fixed.style.backgroundImage = `url(${image})`;
+      fixed.style.display = "block";
+    });
+
+    e.addEventListener("touchend", function () {
+      fixed.style.display = "none";
+    });
+
+    // Optional: in case the user moves finger off the element
+    e.addEventListener("touchcancel", function () {
+      fixed.style.display = "none";
     });
   });
 }
+
 
 document.getElementById("hamburger").addEventListener("click", function () {
   const nav = document.getElementById("nav-part2");
@@ -98,3 +119,4 @@ function loaderAnimation() {
 
 page4Animation();
 loaderAnimation();
+mobileImageClick(); 
