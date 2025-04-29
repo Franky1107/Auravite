@@ -7,44 +7,23 @@ window.addEventListener("load", () => {
 });
 
 function page4Animation() {
-  const elemC = document.querySelector("#elem-container");
-  const fixed = document.querySelector("#fixed-image");
-  const elems = document.querySelectorAll(".elem");
-
-  // Desktop hover behavior
-  elemC.addEventListener("mouseenter", () => {
+  var elemC = document.querySelector("#elem-container");
+  var fixed = document.querySelector("#fixed-image");
+  elemC.addEventListener("mouseenter", function () {
     fixed.style.display = "block";
   });
-  elemC.addEventListener("mouseleave", () => {
+  elemC.addEventListener("mouseleave", function () {
     fixed.style.display = "none";
   });
 
-  elems.forEach((e) => {
-    const image = e.getAttribute("data-image");
-
-    // Desktop: image changes on hover
-    e.addEventListener("mouseenter", () => {
+  var elems = document.querySelectorAll(".elem");
+  elems.forEach(function (e) {
+    e.addEventListener("mouseenter", function () {
+      var image = e.getAttribute("data-image");
       fixed.style.backgroundImage = `url(${image})`;
-    });
-
-    // Mobile: image appears on touch start
-    e.addEventListener("touchstart", () => {
-      fixed.style.backgroundImage = `url(${image})`;
-      fixed.style.display = "block";
-    });
-
-    // Mobile: image hides when touch ends or is canceled
-    e.addEventListener("touchend", () => {
-      fixed.style.display = "none";
-    });
-
-    e.addEventListener("touchcancel", () => {
-      fixed.style.display = "none";
     });
   });
 }
-
-
 
 document.getElementById("hamburger").addEventListener("click", function () {
   const nav = document.getElementById("nav-part2");
